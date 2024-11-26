@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Street Gym</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">STREET GYM</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="curso.html">Curso</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="iniciar-sesion.html">Iniciar sesión</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a class="btn-reservar" href="reservas.html">Reservar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <h2>Iniciar Sesión / Registro</h2>
+            <div class="form-container">
+                <div class="login-form">
+                    <h3>Iniciar Sesión</h3>
+                    <form id="login-form" action="#" method="POST">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" name="login_email" required placeholder="Tu correo electrónico">
+
+                        <label for="login-password">Contraseña:</label>
+                        <input type="password" id="login-password" name="login_password" required placeholder="Tu contraseña">
+
+                        <button type="submit">Iniciar Sesión</button>
+                    </form>
+                </div>
+                <div class="register-form">
+                    <h3>Registro</h3>
+                    <form id="register-form" action="#" method="POST">
+                        <label for="register-name">Nombre:</label>
+                        <input type="text" id="register-name" name="register_name" required placeholder="Tu nombre">
+
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" name="register_email" required placeholder="Tu correo electrónico">
+
+                        <label for="register-password">Contraseña:</label>
+                        <input type="password" id="register-password" name="register_password" required placeholder="Crea una contraseña">
+
+                        <button type="submit">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 STREET GYM. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Street Gym</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="carrito.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">STREET GYM</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="curso.html">Curso</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tienda</h2>
+        <div class="producto">
+            <img src="images/productos/mancuernas.jpg" alt="Mancuernas">
+            <h3>Mancuernas</h3>
+            <p>Precio: $400.00</p>
+            <button onclick="agregarAlCarrito('Mancuernas', 400.00, 'images/productos/mancuernas.jpg')">Agregar al carrito</button>
+        </div>
+    </main>
+</body>
+</html>

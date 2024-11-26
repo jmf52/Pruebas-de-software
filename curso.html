@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Street Gym</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="carrito.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">STREET GYM</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cursos</h2>
+        <div class="curso">
+            <img src="img/entrenamiento_personal.jpg" alt="Entrenamiento Personal">
+            <h3>Entrenamiento Personal</h3>
+            <p>Precio: $800.00</p>
+            <button onclick="agregarAlCarrito('Entrenamiento Personal', 800.00, 'img/entrenamiento_personal.jpg')">Agregar al carrito</button>
+        </div>
+    </main>
+</body>
+</html>

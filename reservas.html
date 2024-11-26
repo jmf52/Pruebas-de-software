@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Street Gym</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">STREET GYM</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="curso.html">Curso</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="iniciar-sesion.html">Iniciar sesión</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a class="btn-reservar" href="reservas.html">Reservar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reservation-section">
+            <h2>Reservar una Clase o Servicio</h2>
+            <p>Reserva tu espacio en nuestras clases o servicios personalizados.</p>
+            <form id="reservation-form" action="#" method="POST">
+                <label for="reservation-type">Tipo de Clase o Servicio:</label>
+                <select id="reservation-type" name="reservation_type" required>
+                    <option value="entrenamiento_personal">Entrenamiento Personal</option>
+                    <option value="clase_grupal">Clase Grupal</option>
+                    <option value="entrenamiento_online">Entrenamiento Online</option>
+                    <option value="nutricion">Asesoría Nutricional</option>
+                </select>
+
+                <label for="trainer">Entrenador (opcional):</label>
+                <select id="trainer" name="trainer">
+                    <option value="">Seleccionar entrenador</option>
+                    <option value="maria_gonzalez">María González</option>
+                    <option value="carlos_lopez">Carlos López</option>
+                    <option value="laura_martinez">Laura Martínez</option>
+                </select>
+
+                <label for="reservation-date">Fecha:</label>
+                <input type="date" id="reservation-date" name="date" required>
+
+                <label for="reservation-time">Hora:</label>
+                <input type="time" id="reservation-time" name="time" required>
+
+                <label for="comments">Comentarios adicionales:</label>
+                <textarea id="comments" name="comments" rows="3" placeholder="¿Tienes alguna petición especial?"></textarea>
+
+                <button type="submit">Reservar Ahora</button>
+            </form>
+        </section>
+
+        <section class="cart-section">
+            <h2>Tu Carrito de Reservas</h2>
+            <div id="cart-items">
+                <!-- Aquí se mostrarán los ítems del carrito -->
+                <p>No hay reservas en tu carrito.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 STREET GYM. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        // Script para manejar el carrito de reservas
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+
+            const reservationType = document.getElementById('reservation-type').value;
+            const trainer = document.getElementById('trainer').value;
+            const date = document.getElementById('reservation-date').value;
+            const time = document.getElementById('reservation-time').value;
+            const comments = document.getElementById('comments').value;
+
+            // Crear un elemento de reserva
+            const reservationItem = document.createElement('div');
+            reservationItem.className = 'cart-item';
+            reservationItem.innerHTML = `
+                <strong>Clase/Servicio:</strong> ${reservationType} <br>
+                <strong>Entrenador:</strong> ${trainer || 'No especificado'} <br>
+                <strong>Fecha:</strong> ${date} <br>
+                <strong>Hora:</strong> ${time} <br>
+                <strong>Comentarios:</strong> ${comments || 'Ninguno'}
+            `;
+
+            // Añadir la reserva al carrito
+            const cartItems = document.getElementById('cart-items');
+            if (cartItems.innerHTML.includes('No hay reservas en tu carrito.')) {
+                cartItems.innerHTML = ''; // Limpiar el mensaje inicial
+            }
+            cartItems.appendChild(reservationItem);
+
+            // Limpiar el formulario después de añadir la reserva
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* Estilos generales - Diseño moderno y cómodo */
+body {
+    background-color: #f4f4f9; /* Gris claro suave */
+    color: #333; /* Gris oscuro para mejor legibilidad */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Encabezado - Atractivo y funcional */
+header {
+    background-color: #005f73; /* Azul oscuro */
+    color: white;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #f4f4f9; /* Blanco suave */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6f61; /* Naranja suave */
+}
+
+/* Sección de Contacto - Fresco y claro */
+.contact-section {
+    padding: 40px;
+    background-color: #ffffff;
+    color: #444;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    color: #ff6f61; /* Naranja */
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de formularios - Intuitivo y fácil de usar */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-size: 16px;
+    color: #005f73;
+    font-weight: 500;
+}
+
+form input, form textarea, form button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form input, form textarea {
+    width: 100%;
+}
+
+form button {
+    background-color: #ff6f61; /* Naranja suave */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #d04e42; /* Naranja oscuro */
+}
+
+/* Barra de navegación - Estilo más dinámico */
+.navbar {
+    background-color: #005f73; /* Azul oscuro */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Diseño Responsivo - Para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-section {
+        padding: 30px 15px;
+    }
+
+    .producto, .curso {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Footer - Diseño relajante y elegante */
+footer {
+    background-color: #005f73; /* Azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 16px;
+}
